@@ -1,1 +1,1 @@
-{"1102984407-63529eac": {"model": "renault", "link": "https://auto.ru/cars/used/sale/renault/megane/1102984407-63529eac/"}}
+{"1103862017-3ad330f7": {"model": "suzuki", "link": "https://auto.ru/cars/used/sale/suzuki/alto/1103862017-3ad330f7/"}, "1103856272-9eb4b0ea": {"model": "suzuki", "link": "https://auto.ru/cars/used/sale/suzuki/wagon_r/1103856272-9eb4b0ea/"}}
