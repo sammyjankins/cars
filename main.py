@@ -17,7 +17,6 @@ p = {
     'km_age_to': '150000',
     'displacement_to': '2000',
     'clearance_from': '140',
-
 }
 
 URL = (f'https://auto.ru/krasnoyarsk/cars/vendor-foreign/all/?top_days=3&year_from={p["year_from"]}&'
@@ -80,7 +79,9 @@ def check_file():
                 timer = 960
             else:
                 timer -= 1
-            print(timer)
+            print(f'timer: {timer}\n'
+                  f'current parameters: year - {p["year_from"]}, price - {p["price_to"]}, km - {p["km_age_to"]}, V - '
+                  f'{p["displacement_to"]}, h - {p["clearance_from"]}')
 
         time.sleep(30)
 
