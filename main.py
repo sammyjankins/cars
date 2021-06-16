@@ -11,9 +11,9 @@ user = os.environ.get('TGUSER')
 
 file_path = 'cars.txt'
 
-URL = ('https://auto.ru/krasnoyarsk/cars/vendor-foreign/all/?top_days=3&year_from=2010&price_to=550000&km_age_to='
-       '150000&displacement_to=2000&clearance_from=150&owners_count_group=LESS_THAN_TWO&transmission=ROBOT&'
-       'transmission=AUTOMATIC&transmission=VARIATOR&transmission=AUTO&sort=cr_date-desc&steering_wheel=LEFT')
+URL = ('https://auto.ru/krasnoyarsk/cars/vendor-foreign/all/?top_days=3&year_from=2009&price_to=500000&km_age_to='
+       '150000&displacement_to=2000&transmission=ROBOT&transmission=AUTOMATIC&transmission=VARIATOR&transmission='
+       'AUTO&steering_wheel=LEFT&sort=cr_date-desc&clearance_from=140')
 
 # owners options LESS_THAN_TWO / ONE
 
