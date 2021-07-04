@@ -15,14 +15,14 @@ p = {
     'year_from': '2009',
     'price_to': '500000',
     'km_age_to': '150000',
-    'displacement_to': '2000',
+    'displacement_to': '1600',
     'clearance_from': '140',
 }
 
 URL = (f'https://auto.ru/krasnoyarsk/cars/vendor-foreign/all/?top_days=3&year_from={p["year_from"]}&'
        f'price_to={p["price_to"]}&km_age_to={p["km_age_to"]}&displacement_to={p["displacement_to"]}&transmission=ROBOT&'
        f'transmission=AUTOMATIC&transmission=VARIATOR&transmission='
-       f'AUTO&steering_wheel=LEFT&sort=cr_date-desc&clearance_from={p["clearance_from"]}')
+       f'AUTO&sort=cr_date-desc&clearance_from={p["clearance_from"]}')
 
 # owners options LESS_THAN_TWO / ONE
 
@@ -68,6 +68,7 @@ def check_file():
 
         if result := checked.keys() - cars_in_file.keys():
             car = result.pop()
+            timer = 960
             with open(file_path, mode='w', encoding='utf-8') as f:
                 cars_in_file.update({car: checked[car]})
                 f.write(json.dumps(cars_in_file))
@@ -76,13 +77,8 @@ def check_file():
             print('no')
             if timer == 0:
                 bot.send_message(chat_id=user, text='No new cars in last 8 hours')
-                timer = 960
             else:
                 timer -= 1
-            print(f'timer: {timer}\n'
-                  f'current parameters: year - {p["year_from"]}, price - {p["price_to"]}, km - {p["km_age_to"]}, V - '
-                  f'{p["displacement_to"]}, h - {p["clearance_from"]}')
-
         time.sleep(30)
 
 
